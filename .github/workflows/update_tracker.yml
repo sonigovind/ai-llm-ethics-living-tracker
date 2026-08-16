@@ -36,12 +36,15 @@ jobs:
           CONTACT_EMAIL: ${{ secrets.CONTACT_EMAIL }}
         run: python update_tracker.py
 
-      - name: Commit refreshed data and workbook
+      - name: Export live Google Sheets feeds
+        run: python export_live_csv.py
+
+      - name: Commit refreshed data, feeds and workbook
         run: |
           git config user.name "ai-ethics-tracker-bot"
           git config user.email "actions@users.noreply.github.com"
 
-          git add AI_LLM_Ethics_Living_Tracker.xlsx data/
+          git add AI_LLM_Ethics_Living_Tracker.xlsx data/ live/
 
           if git diff --cached --quiet; then
             echo "No changes to commit."
