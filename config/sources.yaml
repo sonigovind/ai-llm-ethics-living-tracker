@@ -189,7 +189,7 @@ policy_pages:
     url: "https://www.unesco.org/en/artificial-intelligence"
     domain: "unesco.org"
     authority: 98
-  - name: "IndiaAI Safe & Trusted AI"
-    url: "https://indiaai.gov.in/hub/safe-trusted-ai"
-    domain: "indiaai.gov.in"
-    authority: 98
+  - name: "IndiaAI / MeitY — PIB Releases"
+    url: "https://www.pib.gov.in/AllRelease.aspx?MenuId=30&lang=1&reg=3"
+    domain: "pib.gov.in"
+    authority: 100
