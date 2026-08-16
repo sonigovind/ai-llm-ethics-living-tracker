@@ -1,0 +1,195 @@
+project:
+  title: "AI & LLM Ethics Living Literature Tracker"
+  output_xlsx: "AI_LLM_Ethics_Living_Tracker.xlsx"
+  lookback_days: 10
+  new_this_week_days: 7
+  minimum_review_score: 70
+  auto_promote_official_score: 95
+  auto_promote_official: true
+  max_results_per_query: 30
+  max_policy_links_per_page: 25
+  emit_on_first_policy_scan: false
+
+runtime:
+  request_timeout_seconds: 30
+  arxiv_delay_seconds: 3
+  user_agent: "AI-Ethics-Living-Tracker/1.0"
+
+queries:
+  - name: "LLM ethics and responsible AI"
+    general: "large language model ethics responsible AI generative AI risks"
+    arxiv: 'all:"large language model" AND (all:ethics OR all:"responsible AI" OR all:risk)'
+  - name: "Bias fairness and discrimination"
+    general: "large language models bias fairness discrimination stereotypes"
+    arxiv: '(all:LLM OR all:"large language model") AND (all:bias OR all:fairness OR all:discrimination)'
+  - name: "Privacy memory and personal data"
+    general: "LLM agent privacy memory leakage personal data"
+    arxiv: '(all:LLM OR all:"large language model") AND (all:privacy OR all:memory OR all:leakage)'
+  - name: "Persuasion manipulation and autonomy"
+    general: "LLM persuasion manipulation influence autonomy"
+    arxiv: '(all:LLM OR all:"large language model") AND (all:persuasion OR all:manipulation OR all:autonomy)'
+  - name: "Human AI relationships"
+    general: "AI companion emotional dependence anthropomorphism sycophancy LLM"
+    arxiv: '(all:LLM OR all:"artificial intelligence") AND (all:companion OR all:"emotional dependence" OR all:anthropomorphism OR all:sycophancy)'
+  - name: "Agentic AI governance and safety"
+    general: "agentic AI autonomous agents governance safety accountability privacy"
+    arxiv: '(all:"agentic AI" OR all:"LLM agent" OR all:"autonomous agent") AND (all:governance OR all:safety OR all:accountability OR all:privacy)'
+  - name: "Transparency accountability and regulation"
+    general: "AI transparency accountability regulation governance standards generative AI"
+    arxiv: '(all:AI OR all:"large language model") AND (all:transparency OR all:accountability OR all:regulation OR all:governance)'
+  - name: "AI sustainability labor and inequality"
+    general: "AI environmental impact energy water labor automation inequality ethics"
+    arxiv: 'all:AI AND (all:energy OR all:water OR all:labor OR all:automation OR all:inequality)'
+
+themes:
+  "Foundations":
+    - ethics
+    - ethical artificial intelligence
+    - responsible ai
+    - trustworthy ai
+    - human values
+  "Governance & Measurement":
+    - governance
+    - risk management
+    - evaluation
+    - audit
+    - assurance
+    - safety evaluation
+    - risk assessment
+  "Transparency & Accountability":
+    - transparency
+    - accountability
+    - explainability
+    - disclosure
+    - provenance
+    - reporting
+  "Regulation":
+    - regulation
+    - ai act
+    - law
+    - legal framework
+    - guidelines
+    - standard
+    - compliance
+  "India & Global South":
+    - indiaai
+    - india ai
+    - global south
+    - inclusive ai
+    - multilingual
+    - india
+  "Bias & Fairness":
+    - bias
+    - fairness
+    - discrimination
+    - stereotype
+    - equity
+    - demographic
+  "Hallucination & Truthfulness":
+    - hallucination
+    - misinformation
+    - truthfulness
+    - factuality
+    - reliability
+  "Privacy":
+    - privacy
+    - data leakage
+    - leakage
+    - extraction
+    - personal data
+    - contextual privacy
+    - memory privacy
+    - memorization
+  "Persuasion & Manipulation":
+    - persuasion
+    - manipulation
+    - influence
+    - autonomy
+    - dark pattern
+    - behavioral influence
+  "Truthfulness & Deception":
+    - deception
+    - deceptive
+    - sycophancy
+    - strategic lying
+    - alignment faking
+  "Human-AI Relationships":
+    - companion
+    - emotional dependence
+    - emotional support
+    - anthropomorphism
+    - attachment
+    - relational
+  "Agentic AI":
+    - agentic ai
+    - llm agent
+    - autonomous agent
+    - multi-agent
+    - tool use
+    - delegation
+    - agent memory
+  "Education & Research":
+    - education
+    - academic integrity
+    - research integrity
+    - student
+    - learning
+  "Human Rights":
+    - human rights
+    - democracy
+    - fundamental rights
+    - civil rights
+  "Environment & Labor":
+    - energy
+    - water
+    - carbon
+    - environment
+    - sustainability
+    - labor
+    - jobs
+    - automation
+    - inequality
+
+impact_signals:
+  - systematic review
+  - survey
+  - meta-analysis
+  - benchmark
+  - framework
+  - guidelines
+  - regulation
+  - standard
+  - policy
+  - governance
+  - evaluation
+  - audit
+  - empirical study
+  - randomized
+  - longitudinal
+
+source_authority:
+  arxiv: 76
+  openalex: 84
+  crossref: 88
+
+policy_pages:
+  - name: "NIST Artificial Intelligence"
+    url: "https://www.nist.gov/artificial-intelligence"
+    domain: "nist.gov"
+    authority: 100
+  - name: "European Commission AI Act"
+    url: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+    domain: "digital-strategy.ec.europa.eu"
+    authority: 100
+  - name: "OECD.AI Wonk"
+    url: "https://oecd.ai/en/wonk"
+    domain: "oecd.ai"
+    authority: 98
+  - name: "UNESCO Artificial Intelligence"
+    url: "https://www.unesco.org/en/artificial-intelligence"
+    domain: "unesco.org"
+    authority: 98
+  - name: "IndiaAI Safe & Trusted AI"
+    url: "https://indiaai.gov.in/hub/safe-trusted-ai"
+    domain: "indiaai.gov.in"
+    authority: 98
