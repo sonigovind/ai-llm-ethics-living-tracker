@@ -1,5 +1,6 @@
 ﻿Run time,Mode,Sources checked,Candidates fetched,New after dedupe,New This Week,Review Queue,Auto-promoted,Errors / notes
-2026-08-16T12:18:00+05:30,Initial build,8,0,0,0,0,0,Living tracker package initialized
-2026-08-16T07:19:28+00:00,scheduled/manual,28,635,50,50,50,0,Policy/IndiaAI Safe & Trusted AI: HTTPError: 403 Client Error: Forbidden for url: https://indiaai.gov.in/hub/safe-trusted-ai
-2026-08-16T07:39:54+00:00,scheduled/manual,28,635,1,51,51,0,Policy/IndiaAI Safe & Trusted AI: HTTPError: 403 Client Error: Forbidden for url: https://indiaai.gov.in/hub/safe-trusted-ai
+2026-08-16T10:48:23+00:00,scheduled/manual,29,640,0,68,68,0,Completed without recorded source errors
 2026-08-16T10:42:00+00:00,scheduled/manual,29,645,17,68,68,0,Completed without recorded source errors
+2026-08-16T07:39:54+00:00,scheduled/manual,28,635,1,51,51,0,Policy/IndiaAI Safe & Trusted AI: HTTPError: 403 Client Error: Forbidden for url: https://indiaai.gov.in/hub/safe-trusted-ai
+2026-08-16T07:19:28+00:00,scheduled/manual,28,635,50,50,50,0,Policy/IndiaAI Safe & Trusted AI: HTTPError: 403 Client Error: Forbidden for url: https://indiaai.gov.in/hub/safe-trusted-ai
+2026-08-16T12:18:00+05:30,Initial build,8,0,0,0,0,0,Living tracker package initialized
