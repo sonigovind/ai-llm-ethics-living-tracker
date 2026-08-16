@@ -20,5 +20,16 @@
     "review_queue": 50,
     "auto_promoted": 0,
     "notes": "Policy/IndiaAI Safe & Trusted AI: HTTPError: 403 Client Error: Forbidden for url: https://indiaai.gov.in/hub/safe-trusted-ai"
+  },
+  {
+    "run_time": "2026-08-16T07:39:54+00:00",
+    "mode": "scheduled/manual",
+    "sources_checked": 28,
+    "candidates_fetched": 635,
+    "new_after_dedupe": 1,
+    "new_this_week": 51,
+    "review_queue": 51,
+    "auto_promoted": 0,
+    "notes": "Policy/IndiaAI Safe & Trusted AI: HTTPError: 403 Client Error: Forbidden for url: https://indiaai.gov.in/hub/safe-trusted-ai"
   }
 ]
