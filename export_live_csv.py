@@ -29,6 +29,14 @@ def parse_date(value):
         return None
 
 
+def week_label(value):
+    d = parse_date(value)
+    if not d:
+        return ""
+    iso = d.isocalendar()
+    return f"{iso.year}-W{iso.week:02d}"
+
+
 def write_csv(name: str, rows: list[dict], columns: list[tuple[str, str]]):
     path = LIVE / name
     with path.open("w", encoding="utf-8-sig", newline="") as f:
@@ -63,8 +71,9 @@ discovery_cols = [
     ("source_url", "URL"), ("doi", "DOI"), ("decision", "Decision"),
     ("notes_status", "Notes"),
 ]
+archive_cols = [("week", "Detected Week")] + discovery_cols
 
-# Stable views.
+# Stable curated views.
 curated = sorted(library, key=lambda r: (-(int(r.get("year") or 0)), str(r.get("theme", "")), str(r.get("title", ""))))
 must_read = [r for r in library if str(r.get("read_priority", "")) == "Must Read"]
 must_read.sort(key=lambda r: (-(int(r.get("year") or 0)), -(int(r.get("relevance_5") or 0)), str(r.get("title", ""))))
@@ -78,7 +87,7 @@ def is_policy(r):
 policy = [r for r in library if is_policy(r)]
 policy.sort(key=lambda r: (-(int(r.get("year") or 0)), str(r.get("title", ""))))
 
-# Recent discovery view.
+# Recent discovery view: rolling last 7 days.
 cutoff = date.today() - timedelta(days=7)
 new_week = []
 for r in discovered:
@@ -88,11 +97,20 @@ for r in discovered:
         new_week.append(r)
 new_week.sort(key=lambda r: (-int(r.get("importance_score") or 0), str(r.get("publication_date", ""))), reverse=False)
 
+# Permanent discovery archive: nothing disappears when it ages out of New This Week.
+archive = []
+for r in discovered:
+    item = dict(r)
+    item["week"] = week_label(item.get("detected_date"))
+    archive.append(item)
+archive.sort(key=lambda r: (str(r.get("detected_date", "")), int(r.get("importance_score") or 0)), reverse=True)
+
 write_csv("curated_library.csv", curated, library_cols)
 write_csv("must_read.csv", must_read, library_cols)
 write_csv("2026_only.csv", only_2026, library_cols)
 write_csv("policy_regulation.csv", policy, library_cols)
 write_csv("new_this_week.csv", new_week, discovery_cols)
+write_csv("archive.csv", archive, archive_cols)
 
 log_cols = [
     ("run_time", "Run time"), ("mode", "Mode"), ("sources_checked", "Sources checked"),
@@ -100,7 +118,6 @@ log_cols = [
     ("new_this_week", "New This Week"), ("review_queue", "Review Queue"),
     ("auto_promoted", "Auto-promoted"), ("notes", "Errors / notes"),
 ]
-# Newest run first so readers see current status before historical errors.
 write_csv("update_log.csv", list(reversed(logs[-100:])), log_cols)
 
 stats_cols = [("metric", "Metric"), ("value", "Value")]
@@ -109,6 +126,7 @@ stats = [
     {"metric": "2026 sources", "value": len(only_2026)},
     {"metric": "Must Read", "value": len(must_read)},
     {"metric": "New this week", "value": len(new_week)},
+    {"metric": "Archived discoveries", "value": len(archive)},
     {"metric": "Last run", "value": logs[-1].get("run_time", "") if logs else ""},
 ]
 write_csv("dashboard_stats.csv", stats, stats_cols)
