@@ -100,7 +100,8 @@ log_cols = [
     ("new_this_week", "New This Week"), ("review_queue", "Review Queue"),
     ("auto_promoted", "Auto-promoted"), ("notes", "Errors / notes"),
 ]
-write_csv("update_log.csv", logs[-100:], log_cols)
+# Newest run first so readers see current status before historical errors.
+write_csv("update_log.csv", list(reversed(logs[-100:])), log_cols)
 
 stats_cols = [("metric", "Metric"), ("value", "Value")]
 stats = [
