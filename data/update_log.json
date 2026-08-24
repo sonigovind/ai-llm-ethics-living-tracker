@@ -75,5 +75,16 @@
     "review_queue": 83,
     "auto_promoted": 0,
     "notes": "Completed without recorded source errors"
+  },
+  {
+    "run_time": "2026-08-24T03:29:52+00:00",
+    "mode": "scheduled/manual",
+    "sources_checked": 28,
+    "candidates_fetched": 596,
+    "new_after_dedupe": 37,
+    "new_this_week": 52,
+    "review_queue": 120,
+    "auto_promoted": 0,
+    "notes": "OpenAlex/AI sustainability labor and inequality: HTTPError: 429 Client Error: Too Many Requests for url: https://api.openalex.org/works?search=AI+environmental+impact+energy+water+labor+automation+inequality+ethics&filter=from_publication_date%3A2026-08-14%2Cto_publication_date%3A2026-08-24&sort=publication_date%3Adesc&per_page=30"
   }
 ]
