@@ -97,5 +97,16 @@
     "review_queue": 167,
     "auto_promoted": 0,
     "notes": "OpenAlex/Privacy memory and personal data: HTTPError: 429 Client Error: Too Many Requests for url: https://api.openalex.org/works?search=LLM+agent+privacy+memory+leakage+personal+data&filter=from_publication_date%3A2026-08-21%2Cto_publication_date%3A2026-08-31&sort=publication_date%3Adesc&per_page=30; OpenAlex/Persuasion manipulation and autonomy: HTTPError: 429 Client Error: Too Many Requests for url: https://api.openalex.org/works?search=LLM+persuasion+manipulation+influence+autonomy&filter=from_publication_date%3A2026-08-21%2Cto_publication_date%3A2026-08-31&sort=publication_date%3Adesc&per_page=30; OpenAlex/Human AI relationships: HTTPError: 429 Client Error: Too Many Requests for url: https://api.openalex.org/works?search=AI+companion+emotional+dependence+anthropomorphism+sycophancy+LLM&filter=from_publication_date%3A2026-08-21%2Cto_publication_date%3A2026-08-31&sort=publication_date%3Adesc&per_page=30; OpenAlex/Agentic AI governance and safety: HTTPError: 429 Client Error: Too Many Requests for url: https://api.openalex.org/works?search=agentic+AI+autonomous+agents+governance+safety+accountability+privacy&filter=from_publication_date%3A2026-08-21%2Cto_publication_date%3A2026-08-31&sort=publication_date%3Adesc&per_page=30"
+  },
+  {
+    "run_time": "2026-09-07T07:26:44+00:00",
+    "mode": "scheduled/manual",
+    "sources_checked": 29,
+    "candidates_fetched": 623,
+    "new_after_dedupe": 50,
+    "new_this_week": 97,
+    "review_queue": 217,
+    "auto_promoted": 0,
+    "notes": "Completed without recorded source errors"
   }
 ]
