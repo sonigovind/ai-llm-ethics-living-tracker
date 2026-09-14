@@ -108,5 +108,16 @@
     "review_queue": 217,
     "auto_promoted": 0,
     "notes": "Completed without recorded source errors"
+  },
+  {
+    "run_time": "2026-09-14T08:01:36+00:00",
+    "mode": "scheduled/manual",
+    "sources_checked": 14,
+    "candidates_fetched": 247,
+    "new_after_dedupe": 11,
+    "new_this_week": 61,
+    "review_queue": 228,
+    "auto_promoted": 0,
+    "notes": "arXiv/LLM ethics and responsible AI: HTTPError: 429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=all%3A%22large+language+model%22+AND+%28all%3Aethics+OR+all%3A%22responsible+AI%22+OR+all%3Arisk%29&start=0&max_results=30&sortBy=submittedDate&sortOrder=descending; OpenAlex/LLM ethics and responsible AI: HTTPError: 429 Client Error: Too Many Requests for url: https://api.openalex.org/works?search=large+language+model+ethics+responsible+AI+generative+AI+risks&filter=from_publication_date%3A2026-09-04%2Cto_publication_date%3A2026-09-14&sort=publication_date%3Adesc&per_page=30; arXiv/Bias fairness and discrimination: HTTPError: 429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=%28all%3ALLM+OR+all%3A%22large+language+model%22%29+AND+%28all%3Abias+OR+all%3Afairness+OR+all%3Adiscrimination%29&start=0&max_results=30&sortBy=submittedDate&sortOrder=descending; OpenAlex/Bias fairness and discrimination: HTTPError: 429 Client Error: Too Many Requests for url: https://api.openalex.org/works?search=large+language+models+bias+fairness+discrimination+stereotypes&filter=from_publication_date%3A2026-09-04%2Cto_publication_date%3A2026-09-14&sort=publication_date%3Adesc&per_page=30; arXiv/Privacy memory and personal data: HTTPError: 429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=%28all%3ALLM+OR+all%3A%22large+language+model%22%29+AND+%28all%3Aprivacy+OR+all%3Amemory+OR+all%3Aleakage%29&start=0&max_results=30&sortBy=submittedDate&sortOrder=descending; OpenAlex/Privacy memory and personal data: HTTPError: 429 Client Error: Too Many Requests for url: https://api.openalex.org/works?search=LLM+agent+privacy+memory+leakage+personal+data&filter=from_publication_date%3A2026-09-04%2Cto_publication_date%3A2026-09-14&sort=publication_date%3Adesc&per_page=30; arXiv/Persuasion manipulation and autonomy: HTTPError: 429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=%28all%3ALLM+OR+all%3A%22large+language+model%22%29+AND+%28all%3Apersuasion+OR+all%3Amanipulation+OR+all%3Aautonomy%29&start=0&max_results=30&sortBy=submittedDate&sortOrder=descending; OpenAlex/Persuasion manipulation and autonomy: HTTPError: 429 Client Error: Too Many Requests for url: https://api.openalex.org/works?search=LLM+persuasion+manipulation+influence+autonomy&filter=from_publication_date%3A2026-09-04%2Cto_publication_date%3A2026-09-14&sort=publication_date%3Adesc&per_page=30"
   }
 ]
