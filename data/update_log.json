@@ -163,5 +163,16 @@
     "review_queue": 435,
     "auto_promoted": 0,
     "notes": "Completed without recorded source errors"
+  },
+  {
+    "run_time": "2026-10-19T07:59:02+00:00",
+    "mode": "scheduled/manual",
+    "sources_checked": 29,
+    "candidates_fetched": 649,
+    "new_after_dedupe": 53,
+    "new_this_week": 94,
+    "review_queue": 488,
+    "auto_promoted": 0,
+    "notes": "Completed without recorded source errors"
   }
 ]
