@@ -1,4 +1,5 @@
 ﻿Run time,Mode,Sources checked,Candidates fetched,New after dedupe,New This Week,Review Queue,Auto-promoted,Errors / notes
+2026-10-26T07:58:58+00:00,scheduled/manual,28,651,40,93,528,0,Policy/European Commission AI Act: HTTPError: 403 Client Error: Forbidden for url: https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
 2026-10-19T07:59:02+00:00,scheduled/manual,29,649,53,94,488,0,Completed without recorded source errors
 2026-10-12T09:31:44+00:00,scheduled/manual,29,632,41,89,435,0,Completed without recorded source errors
 2026-10-05T09:20:01+00:00,scheduled/manual,29,651,48,107,394,0,Completed without recorded source errors

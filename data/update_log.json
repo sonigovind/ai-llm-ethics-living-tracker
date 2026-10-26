@@ -174,5 +174,16 @@
     "review_queue": 488,
     "auto_promoted": 0,
     "notes": "Completed without recorded source errors"
+  },
+  {
+    "run_time": "2026-10-26T07:58:58+00:00",
+    "mode": "scheduled/manual",
+    "sources_checked": 28,
+    "candidates_fetched": 651,
+    "new_after_dedupe": 40,
+    "new_this_week": 93,
+    "review_queue": 528,
+    "auto_promoted": 0,
+    "notes": "Policy/European Commission AI Act: HTTPError: 403 Client Error: Forbidden for url: https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
   }
 ]
